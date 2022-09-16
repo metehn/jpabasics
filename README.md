@@ -1,7 +1,6 @@
 # jpabasics
 
 ORM, JPA & Hibernate
-
   <br/>
 <h4>Basics </h4>
 <ul>
