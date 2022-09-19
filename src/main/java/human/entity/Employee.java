@@ -18,7 +18,8 @@ public class Employee {
     private long employeeId;
     private String employeeName;
     private double monthlySalary;
-    @ManyToOne(fetch = FetchType.EAGER) @JoinColumn(name = "departmentId") // bunu yazmazsak kendi bir isim verecek
+    @ManyToOne(fetch = FetchType.EAGER) // varsayılan olarak FetchType.LAZY, gerekmedikçe getirme anlamındadır
+    @JoinColumn(name = "departmentId") // bunu yazmazsak kendi bir isim verecek
     private Department department;
 
     public Employee(long employeeId, String employeeName, double monthlySalary) {

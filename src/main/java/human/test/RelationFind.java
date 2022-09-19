@@ -28,7 +28,7 @@ public class RelationFind {
 
         for(Employee employee : departmentB.getEmployeeList()){
 
-            System.out.println(employee.getEmployeeName());
+            System.out.println(employee.getEmployeeName()); //fetch = FetchType.LAZY entityManager.close()'dan sonra çalıştırdığımız için hata verebilirdi.
         }
 
 

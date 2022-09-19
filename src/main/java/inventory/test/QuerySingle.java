@@ -16,7 +16,7 @@ public class QuerySingle {
         EntityManager entityManager = factory.createEntityManager();
 
         String jpql = "select product from Product as product where product.salesPrice < :salesPriceMin";
-        TypedQuery<Product> query = entityManager.createQuery(jpql, Product.class);//Bunu yazmasak yukarıdakini direkt kullansak da olurdu ama böyle daha iyi. Handgi tipte nesne tutan bir liste döneceğini söylüyoruz
+        TypedQuery<Product> query = entityManager.createQuery(jpql, Product.class);//Bunu yazmasak yukarıdakini direkt kullansak da olurdu ama böyle daha iyi. Hangi tipte nesne tutan bir liste döneceğini söylüyoruz
         query.setParameter("salesPriceMin", salesPriceMin);
 
         try {
